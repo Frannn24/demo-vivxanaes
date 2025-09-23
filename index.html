@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viviendas Xanaes - Construcción en Seco</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'xanaes': {
+                            'dark': '#1a202c',
+                            'gray': '#4a5568',
+                            'light': '#e2e8f0',
+                            'accent': '#2d3748'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(26, 32, 44, 0.8), rgba(26, 32, 44, 0.8)), url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .model-card {
+            transition: transform 0.3s ease;
+        }
+        .model-card:hover {
+            transform: translateY(-5px);
+        }
+        .logo-text {
+            font-family: 'Arial Black', Arial, sans-serif;
+            letter-spacing: 1px;
+        }
+        .whatsapp-button {
+            background: #25D366;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-button:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex flex-col items-start">
+                <div class="logo-text text-xl font-black text-xanaes-dark">VIVIENDAS</div>
+                <div class="logo-text text-2xl font-black text-xanaes-dark -mt-1">XANAES</div>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#inicio" class="text-xanaes-gray hover:text-xanaes-dark font-medium">Inicio</a>
+                <a href="#modelos" class="text-xanaes-gray hover:text-xanaes-dark font-medium">Modelos</a>
+                <a href="#informacion" class="text-xanaes-gray hover:text-xanaes-dark font-medium">Información</a>
+                <a href="#contacto" class="text-xanaes-gray hover:text-xanaes-dark font-medium">Contacto</a>
+            </nav>
+            <button class="md:hidden text-xanaes-dark">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg py-20 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Construimos tu casa modular</h2>
+            <p class="text-xl mb-8">¡Tiempo de entrega en 30 días!</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#modelos" class="bg-xanaes-accent hover:bg-xanaes-dark text-white px-6 py-3 rounded-lg font-medium">Ver Modelos</a>
+                <a href="#contacto" class="bg-transparent border-2 border-white hover:bg-white hover:text-xanaes-dark text-white px-6 py-3 rounded-lg font-medium">Contactar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modelos Section -->
+    <section id="modelos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-xanaes-dark">Nuestros Modelos de Vivienda</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Modelo 5 -->
+                <div class="model-card bg-white rounded-lg shadow-lg overflow-hidden border border-xanaes-light">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Modelo 5" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-xanaes-dark">Modelo 5</h3>
+                        <p class="text-xanaes-gray mb-4">32 m² - 1 Dormitorio</p>
+                        <ul class="text-sm text-xanaes-gray mb-4 space-y-1">
+                            <li><i class="fas fa-ruler-combined text-xanaes-accent mr-2"></i>Dimensiones: 4x8 m</li>
+                            <li><i class="fas fa-bed text-xanaes-accent mr-2"></i>1 Dormitorio</li>
+                            <li><i class="fas fa-bath text-xanaes-accent mr-2"></i>1 Baño</li>
+                            <li><i class="fas fa-clock text-xanaes-accent mr-2"></i>Entrega: 30 días</li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-xanaes-accent">Consultar precio</span>
+                            <a href="#contacto" class="bg-xanaes-accent hover:bg-xanaes-dark text-white px-4 py-2 rounded text-sm">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modelo 5R -->
+                <div class="model-card bg-white rounded-lg shadow-lg overflow-hidden border border-xanaes-light">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Modelo 5R" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-xanaes-dark">Modelo 5R</h3>
+                        <p class="text-xanaes-gray mb-4">45 m² - 2 Dormitorios</p>
+                        <ul class="text-sm text-xanaes-gray mb-4 space-y-1">
+                            <li><i class="fas fa-ruler-combined text-xanaes-accent mr-2"></i>Dimensiones: 5x9 m</li>
+                            <li><i class="fas fa-bed text-xanaes-accent mr-2"></i>2 Dormitorios</li>
+                            <li><i class="fas fa-bath text-xanaes-accent mr-2"></i>1 Baño</li>
+                            <li><i class="fas fa-clock text-xanaes-accent mr-2"></i>Entrega: 30 días</li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-xanaes-accent">Consultar precio</span>
+                            <a href="#contacto" class="bg-xanaes-accent hover:bg-xanaes-dark text-white px-4 py-2 rounded text-sm">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modelo 6 -->
+                <div class="model-card bg-white rounded-lg shadow-lg overflow-hidden border border-xanaes-light">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Modelo 6" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-xanaes-dark">Modelo 6</h3>
+                        <p class="text-xanaes-gray mb-4">55 m² - 2 Dormitorios</p>
+                        <ul class="text-sm text-xanaes-gray mb-4 space-y-1">
+                            <li><i class="fas fa-ruler-combined text-xanaes-accent mr-2"></i>Dimensiones: 6x9 m</li>
+                            <li><i class="fas fa-bed text-xanaes-accent mr-2"></i>2 Dormitorios</li>
+                            <li><i class="fas fa-bath text-xanaes-accent mr-2"></i>1 Baño</li>
+                            <li><i class="fas fa-clock text-xanaes-accent mr-2"></i>Entrega: 30 días</li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-xanaes-accent">Consultar precio</span>
+                            <a href="#contacto" class="bg-xanaes-accent hover:bg-xanaes-dark text-white px-4 py-2 rounded text-sm">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información Section -->
+    <section id="informacion" class="py-16 bg-xanaes-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-xanaes-dark">INFORMACIÓN</h2>
+            
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                <!-- Estructura -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 text-xanaes-dark">ESTRUCTURA</h3>
+                    <p class="text-xanaes-gray">
+                        El sistema constructivo se compone de perfiles de acero galvanizados PGC y PGU de 100mm 
+                        tanto para muros como para la cubierta de techo armando así una estructura ligera y resistente 
+                        montada sobre platea de hormigón armado.
+                    </p>
+                </div>
+
+                <!-- Aislamiento -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 text-xanaes-dark">AISLACIÓN</h3>
+                    <p class="text-xanaes-gray">
+                        En paredes lana de vidrio + barrera hidrófuga. En el techo espuma de polietileno aluminizado.
+                    </p>
+                </div>
+
+                <!-- Terminaciones -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 text-xanaes-dark">TERMINACIONES</h3>
+                    <p class="text-xanaes-gray">
+                        Aberturas de aluminio exterior en SIDING de color interior tanto en paredes como en el 
+                        cielorraso placas de Durlock con tomado de junta y pintadas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-16 bg-xanaes-dark text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <!-- Logo XANAES -->
+                <div class="flex flex-col items-center mb-8">
+                    <div class="logo-text text-4xl font-black text-white">XANAES</div>
+                </div>
+                
+                <h2 class="text-3xl font-bold mb-4">¿Necesitas presupuesto?</h2>
+                <p class="text-xl mb-8 text-xanaes-light">Comunicate con nosotros</p>
+                
+                <!-- Botón WhatsApp grande -->
+                <div class="mb-10">
+                    <a href="https://wa.me/543572597740" target="_blank" class="whatsapp-button inline-flex items-center text-white px-8 py-4 rounded-lg text-xl font-bold">
+                        <i class="fab fa-whatsapp mr-3 text-2xl"></i> WHATSAPP
+                    </a>
+                </div>
+                
+                <!-- Información de contacto -->
+                <div class="space-y-4 text-lg">
+                    <div class="flex justify-center items-center">
+                        <i class="fas fa-phone text-xanaes-light mr-3"></i>
+                        <span class="font-medium">3572-597740</span>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <i class="fab fa-instagram text-xanaes-light mr-3"></i>
+                        <span class="font-medium">@viviendasxanaes</span>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <i class="fas fa-envelope text-xanaes-light mr-3"></i>
+                        <span class="font-medium">viviendasxanaes@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-xanaes-dark text-white py-8 border-t border-gray-700">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex flex-col items-start">
+                        <div class="logo-text text-xl font-black text-white">VIVIENDAS</div>
+                        <div class="logo-text text-2xl font-black text-white -mt-1">XANAES</div>
+                    </div>
+                    <p class="text-gray-400 mt-2">Construcción en seco - Steel Framing</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/viviendasxanaes" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/543572597740" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Viviendas Xanaes. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de WhatsApp flotante -->
+    <a href="https://wa.me/543572597740" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Smooth scrolling para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Manejo del formulario (solo para demostración)
+        document.querySelector('form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
