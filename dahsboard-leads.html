@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leads - Dashboard Xanaes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'xanaes': {
+                            'dark': '#1a202c',
+                            'gray': '#4a5568',
+                            'light': '#e2e8f0',
+                            'accent': '#2d3748'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+
+    <div class="flex h-screen bg-gray-100">
+        <div class="hidden md:flex flex-col w-64 bg-xanaes-dark">
+            <div class="flex items-center justify-center h-16 bg-xanaes-accent">
+                <span class="text-white text-lg font-bold">VIVIENDAS XANAES</span>
+            </div>
+            <div class="flex flex-col flex-1 overflow-y-auto">
+                <nav class="flex-1 px-2 py-4 bg-xanaes-dark">
+                    <a href="dashboard-resumen.html" class="flex items-center px-4 py-2 text-gray-400 hover:bg-xanaes-accent hover:text-white">
+                        <i class="fas fa-tachometer-alt mr-3"></i> Resumen
+                    </a>
+                    <a href="dashboard-tipologias.html" class="flex items-center px-4 py-2 text-gray-400 hover:bg-xanaes-accent hover:text-white">
+                        <i class="fas fa-home mr-3"></i> Tipologías
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2 text-gray-400 hover:bg-xanaes-accent hover:text-white">
+                        <i class="fas fa-building mr-3"></i> Proyectos
+                    </a>
+                    <a href="dashboard-leads.html" class="flex items-center px-4 py-2 bg-xanaes-accent text-white">
+                        <i class="fas fa-envelope-open-text mr-3"></i> Leads Recibidos
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="flex flex-col flex-1 overflow-y-auto">
+            <div class="flex items-center justify-between h-16 bg-white border-b border-gray-200 px-8">
+                <h1 class="text-2xl font-bold text-xanaes-dark">Leads Recibidos (CRM)</h1>
+                <div class="flex items-center">
+                    <span class="text-xanaes-gray mr-4">Admin (dueño@xanaes.com)</span>
+                    <a href="index.html" class="text-xanaes-gray hover:text-xanaes-dark"><i class="fas fa-sign-out-alt"></i> Salir</a>
+                </div>
+            </div>
+
+            <div class="p-8">
+                <p class="mb-6 text-xanaes-gray">
+                    Aquí verás todos los contactos enviados a través del formulario del sitio web.
+                </p>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <table class="w-full">
+                        <thead class="bg-gray-50 border-b border-gray-200">
+                            <tr>
+                                <th class="p-4 text-left text-sm font-semibold text-xanaes-gray">Fecha</th>
+                                <th class="p-4 text-left text-sm font-semibold text-xanaes-gray">Nombre</th>
+                                <th class="p-4 text-left text-sm font-semibold text-xanaes-gray">Email</th>
+                                <th class="p-4 text-left text-sm font-semibold text-xanaes-gray">Teléfono</th>
+                                <th class="p-4 text-left text-sm font-semibold text-xanaes-gray">Mensaje</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 text-sm text-xanaes-gray">Hoy, 10:30 AM</td>
+                                <td class="p-4 text-sm text-xanaes-dark font-medium">Juan Pérez</td>
+                                <td class="p-4 text-sm text-xanaes-gray">juan@mail.com</td>
+                                <td class="p-4 text-sm text-xanaes-gray">351-123456</td>
+                                <td class="p-4 text-sm text-xanaes-gray truncate max-w-xs">"Hola, quisiera saber el precio de la Tipología S..."</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 text-sm text-xanaes-gray">Ayer, 08:15 PM</td>
+                                <td class="p-4 text-sm text-xanaes-dark font-medium">Maria Gómez</td>
+                                <td class="p-4 text-sm text-xanaes-gray">maria@mail.com</td>
+                                <td class="p-4 text-sm text-xanaes-gray">3572-123456</td>
+                                <td class="p-4 text-sm text-xanaes-gray truncate max-w-xs">"Me interesa el sistema constructivo, ¿dónde están?"</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 text-sm text-xanaes-gray">15/05/2024</td>
+                                <td class="p-4 text-sm text-xanaes-dark font-medium">Carlos Rodriguez</td>
+                                <td class="p-4 text-sm text-xanaes-gray">carlos@mail.com</td>
+                                <td class="p-4 text-sm text-xanaes-gray">11-123456</td>
+                                <td class="p-4 text-sm text-xanaes-gray truncate max-w-xs">"Construyen en Buenos Aires?"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

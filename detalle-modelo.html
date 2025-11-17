@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle - Tipología S</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'xanaes': {
+                            'dark': '#1a202c',
+                            'gray': '#4a5568',
+                            'light': '#e2e8f0',
+                            'accent': '#2d3748'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .logo-text { font-family: 'Arial Black', Arial, sans-serif; letter-spacing: 1px; }
+        .whatsapp-button { background: #25D366; transition: all 0.3s ease; }
+        .whatsapp-button:hover { background: #128C7E; transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex flex-col items-start">
+                <div class="logo-text text-xl font-black text-xanaes-dark">VIVIENDAS</div>
+                <div class="logo-text text-2xl font-black text-xanaes-dark -mt-1">XANAES</div>
+            </a>
+            <a href="index.html#modelos" class="text-xanaes-gray hover:text-xanaes-dark font-medium">
+                <i class="fas fa-arrow-left mr-2"></i>Volver a Modelos
+            </a>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+            <img src="img/proy1.jpg" alt="Tipología S" class="w-full h-64 object-cover">
+            
+            <div class="p-8 md:p-12">
+                <h1 class="text-4xl font-bold text-xanaes-dark mb-4">Tipología S</h1>
+                <p class="text-xl text-xanaes-gray mb-6">32 m² - 1 Dormitorio, 1 Baño, Cocina-Comedor.</p>
+                
+                <p class="text-xanaes-gray mb-6">
+                    Descripción detallada del modelo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. 
+                    Morbi a aliquet odio.
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8 text-xanaes-gray">
+                    <div class="flex items-center"><i class="fas fa-bed text-xanaes-accent mr-2 text-xl"></i><span>1 Dormitorio</span></div>
+                    <div class="flex items-center"><i class="fas fa-bath text-xanaes-accent mr-2 text-xl"></i><span>1 Baño</span></div>
+                    <div class="flex items-center"><i class="fas fa-ruler-combined text-xanaes-accent mr-2 text-xl"></i><span>32 m²</span></div>
+                    <div class="flex items-center"><i class="fas fa-clock text-xanaes-accent mr-2 text-xl"></i><span>Entrega 30 días</span></div>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-xanaes-dark mb-4">¿Interesado en este modelo?</h3>
+                <p class="text-xanaes-gray mb-6">
+                    Haz clic en el botón para enviarnos un WhatsApp con el nombre de este modelo ya cargado.
+                </p>
+                
+                <a 
+                   href="https://wa.me/543572597740?text=Hola,%20me%20interesa%20la%20Tipolog%C3%ADa%20S.%20Quisiera%20saber%20precio%20y%20disponibilidad."
+                   target="_blank" 
+                   class="whatsapp-button inline-flex items-center justify-center px-6 py-3 rounded-lg text-white font-medium shadow-lg w-full md:w-auto text-center">
+                    <i class="fab fa-whatsapp text-2xl mr-3"></i>
+                    <span>Consultar por "Tipología S"</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
